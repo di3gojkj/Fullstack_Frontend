@@ -1,0 +1,25 @@
+import Input from "../atom/Input";
+
+type Props = {
+    etiqueta: string;
+    tipo: string;
+    nombre: string;
+    valor: string;
+    alCambiar: (valor:string) => void; //Recibe la funcion que actualiza el valor
+};
+
+function CampoFormulario({etiqueta,tipo, nombre, valor, alCambiar} : Props){
+    return(
+        <div className="mb-3">
+            <label className="form-label">
+                {etiqueta}
+            </label>
+            <Input
+             tipo= {tipo}
+             nombre= {nombre}
+             valor= {valor}
+             alCambiar={alCambiar}/>
+        </div>
+    );
+}
+export default CampoFormulario;

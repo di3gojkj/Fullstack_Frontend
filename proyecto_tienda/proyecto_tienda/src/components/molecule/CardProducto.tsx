@@ -1,30 +1,62 @@
 import Boton from "../atom/Boton";
 
-function CardPorducto(){
-    return(
-        <div className="card" style={{width: '18rem'}}>
+interface CardProps{
+    id: number;
+    titulo: string;
+    descripcion: string;
+    precio: number;
+    imagen: string;
+}
 
-            <img
-            src="/img/82x70017cl_2_.jpeg" 
-            className="card-img-top"
-            alt="Notebook"
-            />
+function CardProducto({id, titulo, descripcion, precio, imagen}: CardProps){
 
-            <div className="card-body">
-                <h5 className="card-title">
-                    Notebook
-                </h5>
+  return(
 
-                <p className="card-text">
-                    Notebook idela para estudiar y trabajar
-                </p>
+    <div className="card" style={{width: '20rem'}}>
 
-                <Boton />
-            </div>
+
+
+      <img
+
+      src={imagen} 
+
+      className="card-img-top"
+
+      alt={titulo}
+      style={{height: '200px', objectFit:'contain'}}
+
+      />
+
+      <div className="card-body d-flex flex-column">
+
+        <h5 className="card-title">
+
+          {titulo}
+
+        </h5>
+
+        <p className="card-text">
+
+          {descripcion}
+
+        </p>
+
+        <p className="card-text">
+
+          ${precio}
+
+        </p>
+        <div className="mt-auto">
+            <Boton id={id}/>
         </div>
-        
-        
-    )
+
+
+      </div>
+
+    </div>
+
+  )
 
 }
-export default CardPorducto
+
+export default CardProducto

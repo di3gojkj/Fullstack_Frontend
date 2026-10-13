@@ -1,10 +1,19 @@
-function Boton(){
+import {Link} from 'react-router-dom'
 
-    return(
-        <button className="btn btn-primary">
-         Ver producto
-        </button>
+interface BotonProps{
+    id: number;
+}
+
+function Boton({id}: BotonProps){
+    return (
+        <Link
+            to={`/producto/${id}`}
+            className="btn btn-primary"
+        >
+            Ver producto
+        </Link>
     )
 }
 
 export default Boton
+

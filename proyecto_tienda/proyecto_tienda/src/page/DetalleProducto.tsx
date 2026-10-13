@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom'
-import BotonVolver from "../componentes/atomos/BotonVolver"
+import BotonVolver from "../components/atom/BotonVolver"
 
 const productos = [
     {

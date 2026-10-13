@@ -1,36 +1,47 @@
-import { Routes, Route} from 'react-router-dom'
-import Navbar from './components/organism/navbar'
-import Inicio from './page/Inicio'
-import Productos from './page/Productos'
-import Quienes_Somos from './page/Quienes_Somos'
-import Contacto from './page/Contacto'
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/organism/navbar";
+import Inicio from "./page/Inicio";
+import Productos from "./page/Productos";
+import QuienesSomos from "./page/Quienes_Somos";
+import Contacto from "./page/Contacto";
+import DetalleProducto from "./page/DetalleProducto";
+import Login from "./page/Login";
 
-function App(){
-  return(
+function App() {
+  return (
     <>
-    <Navbar/>
+      <Navbar />
 
-    <Routes>
-      <Route
-        path="/" 
-        element={<Inicio />}
-      />  
+      <Routes>
+        <Route 
+          path='/'
+          element={<Inicio />}
+        />
 
-      <Route
-        path="/productos" 
-        element={<Productos />}
-      />  
+        <Route 
+          path='/productos'
+          element={<Productos />}
+        />
 
-      <Route
-        path="/Quienes_somos" 
-        element={<Quienes_Somos />}
-      />  
+        <Route path="/producto/:id"
+        element={<DetalleProducto/>}
+        />
 
-      <Route
-        path="/Contacto" 
-        element={<Contacto />}
-      />  
-    </Routes>
+        <Route 
+          path='/quienessomos'
+          element={<QuienesSomos />}
+        />
+
+        <Route 
+          path='/contacto'
+          element={<Contacto />}
+        />
+
+        <Route 
+          path='/login'
+          element={<Login />}
+        />
+      </Routes>
     </>
   )
 }

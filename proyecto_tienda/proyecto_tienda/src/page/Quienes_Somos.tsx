@@ -1,13 +1,9 @@
-function Quienes_Somos(){
-    return(
-        <div className="container mt-4">
-            <h1>quienes somos</h1>
-
-            <p>
-                Bienvenido a Quienes_Somos
-            </p>
-        </div>
+function QuienesSomos() {
+    return (
+        <img 
+            src="https://media1.tenor.com/m/YrYBWV0WQ1kAAAAd/chimuelo-toothless.gif"
+        />
     )
 }
 
-export default Quienes_Somos
+export default QuienesSomos
